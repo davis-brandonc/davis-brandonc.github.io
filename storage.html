@@ -23,7 +23,7 @@ if (typeof(Storage) !== "undefined") {
 }
 </script>
 
-<script>
+<section>
     var names = ["Jan", "Tif", "Mark", "Chuck", "Olan"];
 var course = "CIT 261 Section 2 Winter 2017";
 var car = {make:"Honda", model:"Odyssey", year:"2012", color:"white"};
@@ -39,7 +39,31 @@ document.writeln("car: " + localStorage.getItem("car") + "");
 document.writeln("Parsed VariablesstoredNames: " + storedNames + "");
 document.writeln("storedCourse: " + storedCourse + "");
 document.writeln("car:Make: " + car.make + "Model: " + car.model + "Year: " + car.year + "Color: " + car.color + "");
-    </script>    
+    </section>
+    
+    <section>
+    var films = [
+             {
+              'id': 1,
+              'title':'John Wick',
+              'Genre':'Action'
+             },
+             {
+              'id': 2,
+              'title':'Taken 3',
+              'Genre':'Action'
+             },
+             {
+              'id': 3,
+              'title':'The Guard',
+              'Genre':'Comedy'
+             }
+            ];
+        localStorage.setItem("films", JSON.stringify(films));
+        var movies = localStorage.getItem("films");
+movies     = JSON.parse(movies);
+        console.dir(movies);
+    </section>
     
 </body>
 </html>

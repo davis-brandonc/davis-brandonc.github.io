@@ -54,7 +54,7 @@ address {
     width:200px;
     height:200px;
     border-radius: 50%;
-    background-image: url(Images/Pic100.jpg);
+    background-image: img src="Images/Pic100.jpg";
     background-repeat:no-repeat;
     background-position:50% 50%;
     

@@ -33,8 +33,8 @@ address {
 
   .spiralContainer {
     border-radius: 50%;
-    width:500px;
-    height:500px;
+    width:800px;
+    height:800px;
     overflow:hidden;
     margin:20px;
     
@@ -51,8 +51,8 @@ address {
     animation-play-state: paused;
   }
   .spiral {
-    width:400px;
-    height:400px;
+    width:800px;
+    height:800px;
     border-radius: 50%;
     background-image: url('Images/Test2.jpg');
     background-repeat:no-repeat;

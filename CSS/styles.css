@@ -18,6 +18,20 @@ main h1 {
 main img {
     float: right;
 }
+
+.box {
+  width: 300px;
+  height: 300px;
+  -webkit-transition: width 2s ease, height 2s ease;
+  -moz-transition: width 2s ease, height 2s ease;
+  -o-transition: width 2s ease, height 2s ease;
+  transition: width 2s ease, height 2s ease;
+}
+
+.box-change {
+  width: 400px;
+  height: 400px;
+}
 footer {
     text-align: center;
     clear: both;

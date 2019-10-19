@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">    
+div#box1 {
+    background: #9DCEFF;
+    width: 600px;
+    height: 300px;
+    }
+    </style>
+    <script>
+function changeBG(el,clr) {
+    var elem = document.getElementById(el);
+    elem.style.transition = "background 1.0s linear 0s";
+    elem.style.background = clr;
+}
+</script>
+</head>
+<title>Test</title>
+<body>
+<button onclick="changeBG('box1','#fc0303');">Red</button>
+<button ondblclick="changeBG('box1','#030ffc');">Blue</button>
+<button onmouseover="changeBG('box1','#ffffff');">White</button>
+<div id="box1">Content in box 1 ...</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="L03" content="Temple Inn & Suites">
+<meta name="Brandon Davis" content="Stuff">
+
+<!-- This start file was build by Brandon Davis -->
+<title>Temple Inn & Suites</title>
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+<!-- STYLE SHEETS -->
+<link href="css/normalize.css" rel="stylesheet">
+<!-- phone-default -->
+<link href="css/small.css" rel="stylesheet">
+<!-- enhance-tablet -->
+<link href="css/medium.css" rel="stylesheet">
+<!-- enhance-desktop -->
+<link href="css/large.css" rel="stylesheet">
+
+
+     
+</head>
+<body>
+    <!-- HEADER HERE -->
+  <header class="clearfix">
+    <img src="images/logo.jpg" alt="logo">
+    <div>
+       <h1>Temple Inn & Suites</h1>
+       <h2>Temple Trips Made Easy!</h2>
+    </div>
+      <section class="weathersummary">
+            <h3>Bellevue Weather</h3>
+			<p><span id=bellevuecurrentconditions></span></p>
+            <p>Current Temperature is <span id=bellevuecurrentTemp>00</span>&deg;</p>
+            <p>Low: <span id=bellevuecurrentlow></span>&deg;</p>
+            <p>High: <span id=bellevuecurrenthigh>00</span>&deg;</p>
+            <p>Windspeed <span id=bellevuecurrentwind></span></p>
+            <img src="images/placeholder.png" alt="current weather" id="weather_icon">
+            </section>
+   </header>
+    
+    
+    
+<!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776;</button>
+        <ul id="primaryNav" class="hide">
+            <li><a href=index.html>Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="idahofalls.html">Idaho Falls</a></li>
+            <li><a href="gilbert.html">Gilbert</a></li>
+            <li><a href="sandiego.html">San Deigo</a></li>
+            <li class="active"><a href="bellevue.html">Bellevue</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+<!-- CONTENT HERE -->
+    <main>
+        
+        
+        <h1>Bellevue</h1>
+        
+        <div class="bellevue">
+            <figure class="bellevue1">
+            <img src="images/bellevuelarge.jpg" alt="Bellevue" sizes="100vw"
+                 srcset="images/bellevuesmall.jpg 699w,
+                         images/bellevuemedium.jpg 999w,
+                         images/bellevuelarge.jpg 1250w">
+            </figure>
+           
+                </div>
+        
+         <h1>Bellevue Temple History</h1>
+                 <p>The Seattle Washington Temple (formerly the Seattle Temple) is the 21st constructed and 19th operating temple of The Church of Jesus Christ of Latter-day Saints (LDS Church). Located in the city of Bellevue, Washington, it was the first to be built in the state of Washington. The temple has a modern single-spire design. Due to its proximity to the Bellevue Airfield, the proposed height of the spire was reduced, and a red strobe warning light was installed at the base of the angel Moroni statue. In 1983, the Bellevue Airfield closed, and the light was shut off. The intention to construct the Seattle Temple was announced on November 15, 1975, and it was dedicated on November 17, 1980 by church president Spencer W. Kimball. The temple was built on 23.5 acres (9.5 ha), has four ordinance rooms and 12 sealing rooms, and has a total floor area of 110,000 square feet (10,000 m2).</p> 
+        
+              <div class="templeSchedule">
+                <h1>Temple Services</h1>
+                <figure class="bellevue2">
+                <img src="images/bellevuegallery.jpg" alt="bellevue2">
+                </figure>
+                <p>Clothing rental available,</p>
+	            <p>Cafeteria available,</p>
+                <p>No patron housing available,</p>
+	            <p>Distribution center nearby</p>
+                <h1>Temple Schedule</h1>
+                <p><b>Baptism Schedule:</b></p>
+                <p>Tuesday - Friday (7:00 AM - 8:30 PM),</p>
+	            <p>Saturday (6:30 AM - 8:30 PM),</p>
+                <p><b>Initiatory Schedule:</b> </p>
+    	        <p>Tuesday - Friday (7:00 AM - 8:30 PM),</p>
+	            <p>Saturday (6:00 AM - 8:30 PM)</p>
+                <p><b>EndowmentSchedule:</b></p>
+                <p>Tuesday - Friday (5:30 AM - 7:30 PM)</p>
+	            <p>Saturday (6:00 AM - 7:30 PM)</p>
+                <p><b>Sealing Schedule</b></p>
+                <p>Tuesday - Friday (9:00 AM - 8:00 PM)</p>
+                <p>Saturday (6:00 AM - 8:00 PM)</p>
+                <h1>Address/Phone Number</h1>
+                <p>Address: 2808 148th Ave SE,</p>
+                <p>Bellevue, WA 98007-6453</p>
+                <p>Telephone Number: 425-643-5144</p>
+        </div>
+        
+        
+        </main>
+           
+<!-- FOOTER HERE -->   
+    <footer>
+        &copy; 2019 &bull; Brandon Davis
+        <p><span>*Weather data provided by openweathermap.org</span></p>
+    </footer>
+        <script src="scripts/weather1.js"></script>
+        <script src="scripts/hamburger.js"></script>
+    </body>
+</html>

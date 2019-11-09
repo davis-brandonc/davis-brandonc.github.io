@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<link href="CSS/styles.css" rel="stylesheet">
+<title>Brandon Davis: Home</title>
+</head>
+   
+<body>
+<H1>touchmove event</H1>
+    <p>The touchmove event occurs when the user moves the finger across the screen.</p>
+    <p>The touchmove event will be triggered once for each movement, and will</p> <p>continue to be triggered until the finger is released.</p>
+    <p>Note: The touchmove event will only work on devices with a touch screen.</p>
+
+<p id="myP">Touch this paragraph and move the finger to trigger a function that will write "A Secret Message".</p>
+
+<p><strong>Note:</strong> This example is for touch devices only.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myP").addEventListener("touchmove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "This is a test to see if I am learning anything";
+}
+</script>
+</body> 
+</html>

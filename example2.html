@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<link href="CSS/styles.css" rel="stylesheet">
+<title>Brandon Davis: Home</title>
+</head>
+   
+<body>
+<H1>onkeydown event</H1>
+    <p>The onkeydown event occurs when the user is pressing a key (on the keyboard).</p>
+
+<p>Press a key inside the text field to set a red background color.</p>
+
+<input type="text" id="test">
+
+<script>
+document.getElementById("test").addEventListener("keydown", myFunction);
+
+function myFunction() {
+  document.getElementById("test").style.backgroundColor = "blue";
+}
+</script>
+
+</body> 
+</html>

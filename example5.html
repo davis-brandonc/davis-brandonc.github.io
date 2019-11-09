@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<link href="CSS/styles.css" rel="stylesheet">
+<title>Brandon Davis: Home</title>
+<head>
+<style> 
+#myDIV {
+  border: 1px solid black;
+  background-color: blue;
+  width: 300px;
+  height: 300px;
+  overflow: auto;
+}
+
+#myDIV:hover {
+  background-color: green;
+  width: 570px;
+  height: 500px;
+  padding: 100px;
+  border-radius: 50px;
+}
+</style>
+</head>
+<body>
+
+<p>Mouse over the DIV element and it will change, both in color and size!</p>
+
+<p>Click the "Try it" button and mouse over the DIV element again. The change will now happen gradually, like an animation:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+  <h1>myDIV</h1>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.WebkitTransition = "all 4s"; // Code for Safari 3.1 to 6.0
+  document.getElementById("myDIV").style.transition = "all 4s";     // Standard syntax
+}
+</script>
+
+</body> 
+</html>

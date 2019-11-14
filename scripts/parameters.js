@@ -3,4 +3,4 @@ function parametersFunction(x, y, b, c, d) {
 }
      return x * y / b * c - d;
 }
-document.getElementById("test123").innerHTML = parametersFunction(4, 1, 5, 3, 4);
+document.getElementById("test123").innerHTML = parametersFunction(4, 5, 2, 3, 4);

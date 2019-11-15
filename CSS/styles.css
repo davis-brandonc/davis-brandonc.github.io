@@ -3,7 +3,8 @@ body {
   font-family: Georgia, "Times New Roman",
         Times, serif;
   color: black;
-  background-color: red}
+  background-color: red;
+  }
 
   .spiralContainer {
     border-radius: 50%;

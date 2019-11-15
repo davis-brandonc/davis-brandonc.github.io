@@ -1,7 +1,7 @@
 [
   {
     "display": "Washington Nationals 2019 Stats Page",
-    "url": " "
+    "url": "http://mlb.mlb.com/stats/sortable.jsp?c_id=was#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Player+hitting&game_type='R'&season=2019&season_type=ANY&league_code='MLB'&sectionType=sp&statType=hitting&page=1&ts=1573858913427"
   },
   {
     "display": "Los Angeles Dodges 2019 Stats Page",

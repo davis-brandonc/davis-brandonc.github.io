@@ -17,8 +17,8 @@
 <p><strong>Note:</strong> Don't try and put the BUFFALO in your trunk to take for a ride along.</p>    
 
     <H1>Audio</H1>
-    <img src="Images/audio.png" alt=object>
-    <p><img src="Images/audioscript.PNG" alt=object></p>
+    <img src="Images/audio.png" alt=audio>
+    <p><img src="Images/audioscript.PNG" alt=audioscript></p>
     
     <audio controls>
         <source src="Images/audiotest.mp3" type="audio/mp3">
@@ -26,6 +26,42 @@
     </audio>
     
     <H1>Canvas</H1>
-    <script src="scripts/canvas.js"></script>
+    <p>The canvas tag is used to draw graphics, on the fly, via scripting (usually JavaScript).</p>                                                                     <p>The canvas tag is only a container for graphics, you must use a script to actually draw the graphics.</p>
+    <p>The following are two examples of how canvas works</p>
     
+    <p>Example: HTML canvas createPattern() Method</p>
+    <p>The createPattern() method repeats the specified element in the specified direction.
+
+The element can be an image, video, or another canvas element.
+
+The repeated element can be used to draw/fill rectangles, circles, lines etc.</p>
+    
+<p>Image to use:</p>
+<img src="Images/Pic100.jpg" id="me" width="60" height="60">
+<p>Canvas:</p>
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<br><br>
+
+<button onclick="draw('repeat')">Repeat</button> 
+<button onclick="draw('repeat-x')">Repeat-x</button> 
+<button onclick="draw('repeat-y')">Repeat-y</button> 
+<button onclick="draw('no-repeat')">No-repeat</button>     
+
+<script>
+function draw(direction) {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.clearRect(0, 0, c.width, c.height); 
+  var img = document.getElementById("me")
+  var pat = ctx.createPattern(img, direction);
+  ctx.rect(0, 0, 600, 600);
+  ctx.fillStyle = pat;
+  ctx.fill();
+}
+</script>
+
+<p><strong>Note:</strong> The canvas tag is not supported in Internet 
+Explorer 8 and earlier versions.</p>
+
   

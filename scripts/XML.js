@@ -1,5 +1,4 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "https://davis-brandonc.github.io/baseball.txt";
 
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -7,7 +6,7 @@ xmlhttp.onreadystatechange = function() {
     myFunction(myArr);
   }
 };
-xmlhttp.open("GET", url, true);
+xmlhttp.open("GET", "/baseball.txt", true);
 xmlhttp.send();
 
 myFunction(myArray);

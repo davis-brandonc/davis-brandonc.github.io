@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<meta charset="UTF-8">
+<link href="CSS/styles.css" rel="stylesheet">
+
+    <H1>JSON Parse, Stringify</H1>
+    
+    <p><b>JSON Parse vs JSON Stringify</b></p>
+    <p>JSON.stringify serializes a JS object into a JSON string, whereas JSON.parse()</p>
+    <p>will deserialize a JSON string into a JS object. They are the opposites of each other.</p>
+    <p>JSON.stringify() serializes a JS object into a JSON string. The JSON.parse() method parses</p>
+    <p>a string as JSON, optionally transforming the value produced./JSON.stringify()</p>
+    
+    <p><b>JSON Parse</b></p>
+    <p>A common use of JSON is to exchange data to/from a web server.</p>
+    <p>When receiving data from a web server, the data is always a string.</p>
+    <p>Parse the data with JSON.parse(), and the data becomes a JavaScript object</p>
+    <p><img src="Images/jsonparse.PNG" alt=jsonsparse></p>
+    <p id="player"></p>
+    <script src="scripts/jsonparse.js"></script>
+    
+    <p><b>JSON Stringify</b><p>
+    <p>A common use of JSON is to exchange data to/from a web server.</p>
+    <p>When sending data to a web server, the data has to be a string.</p>
+    <p>Convert a JavaScript object into a string with JSON.stringify().</p>
+    <p><img src="Images/jsonstringify.png" alt=jsonstringify></p>
+    <p id="players"></p>
+    <script src="scripts/jsonstringify.js"></script>
+    
+    
+    
+    
+     
+<body>
+      
+</body> 
+</html>

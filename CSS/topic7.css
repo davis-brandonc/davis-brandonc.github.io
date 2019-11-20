@@ -1,0 +1,30 @@
+body 
+h1 {
+    background-color: royalblue;
+    margin: 0;
+    font-family: verdana;
+    padding: 20px;
+    text-align: center;
+    color: #515151;
+    font-size: 30px;
+}
+h1 {
+    background-color: royalblue;
+    margin: 0;
+    font-family: verdana;
+    padding: 20px;
+    text-align: center;
+    color: #515151;
+    font-size: 30px;
+}
+
+#square {
+  width: 20em;
+  height: 20em;
+  border: 2px inset gray;
+  margin-bottom: 1em;
+}
+
+button {
+  padding: .5em 2em;
+}

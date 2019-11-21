@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<meta charset="UTF-8">
+<link href="CSS/styles.css" rel="stylesheet">
+<body>
+   
+    <H1> DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc</H1>
+    <H1>Top 10 All-time Homerun Leaders</H1>
+    <ul id="myHomers">
+            <li>755 - Hank Aaron</li>
+            <li>714 - Babe Ruth</li>
+            <li>696 - Alex Rodrigues</li>
+            <li>660 - Willie Mays</li>
+            <li>656 - Albert Pujols</li>
+            <li>630 - Ken Griffey Jr.</li>  </ul>
+    
+    <ul id="allPlayers">
+            <p>Players that need to be added still</p>
+            <li>612 - Jim Thome</li>
+            <li>609 - Sammy Sosa</li></ul>
+    <H1>What is a Node</H1>
+    <p>A "node", in this context, is simply an HTML element. The "DOM" is a tree structure that represents the HTML of the website, and every HTML element is a "node". See Document Object Model (DOM). More specifically, "Node" is an interface that is implemented by multiple other objects, including "document" and "element".</p>
+    <H1>createElement</H1>
+    <p>The createElement() method creates an Element Node with the specified name.</p>
+    <H1>appendChild</H1>
+    <p>The appendChild() method appends a node as the last child of a node.</p>
+    
+        
+        <p>Click the button to append an item to the end of the list.</p>
+        
+        <button onclick="allAdditions()">Add from list</button>
+        <button onclick="myLeaders()">Add Player</button>
+        
+       
+    
+        <script src="scripts/allplayers.js"></script>
+        <script src="scripts/myleaders.js"></script>
+        <script src="scripts/insert.js"></script>
+        <script src="scripts/remove.js"></script>
+        
+
+<p><strong>Note:</strong><br>First create an LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally append the LI node to the list.</p>
+
+    
+    <H1>insertBefore</H1>
+    <p>The insertBefore() method inserts a node as a child, right before an existing child, which you specify.</p>
+    <p>Players that need to be added</p>
+    <button onclick="insertPlayer()">Insert Player</button>
+    <H1>removeChild</H1>
+    <p>The removeChild() method removes a specified child node of the specified element.Returns the removed node as a Node object, or null if the node does not exist.</p>
+     <button onclick="removePlayer()">Remove Player</button>
+      
+</body> 
+</html>

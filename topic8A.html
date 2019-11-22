@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<link href="CSS/topic8.css" rel="stylesheet">
+<meta charset="UTF-8">
+
+    <H1> Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</H1>
+<body>
+    <H2><b>Animations with Javascript Example:</b></H2>    
+<p>An animation lets an element gradually change from one style to another.</p>
+<p>Click the "Javascript Test" button to trigger and manipulate the animation using javascript.</p>
+<img src="Images/animation.PNG" alt=animations>
+   <p> <button onclick="myFunction()">Javascript Test</button></p>
+
+<script>
+function myFunction() {
+document.getElementById("myDIV").style.animation = "mynewmove 20s 1";
+}
+</script>
+
+
+<div id="myDIV">
+    <img src="Images/Pic100.jpg" height="200" />
+    </div>
+    <H2><b>Transition with Javascript Example:</b></H2>
+    <p>Transitions allows you to change property values smoothly, over a given duration.</p>
+   <p> <img src="Images/transition.png" alt=animations></p>
+    <script>
+        function changeBG(el,clr) {
+        var elem = document.getElementById(el);
+        elem.style.transition = "background 3s linear 3s";
+        elem.style.background = clr;
+        }
+    </script>
+        <button onclick="changeBG('box1','#FF0000');">Red</button>
+        <button ondblclick="changeBG('box1','#F5f5f5');">White</button>
+        <button onmouseover="changeBG('box1','#0000ff');">Blue</button>
+        <p>Check out my transitions. Click the green button once to change the box to green. Click the blue button twice to change the box to blue and hover over the white to change the box to white.</p>
+        <p><div id="box1">This is what javascript can do</div>
+        
+
+</body>
+</html>

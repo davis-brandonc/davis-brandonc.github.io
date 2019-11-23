@@ -1,0 +1,40 @@
+h2 {
+        font-family: Showcard Gothic;    
+        text-align: left;
+        font-size: 15px;
+        color: navy;
+        margin:0px;
+        padding-bottom: 2rem;
+    }
+
+body {
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: black;
+  background-color: red;
+}
+    div.rotate {
+    width: 300px;
+    height: 225px;
+    background-image: url('Images/IMG_9700B.jpg');
+    transform: rotate(20deg);
+    }
+
+ div.skew {
+    width: 300px;
+    height: 225px;
+    background-image: url('Images/IMG_9700B.jpg');
+    transform: skew(15deg, 15deg);
+}
+
+ div.translate {
+    width: 300px;
+    height: 225px;
+    background-image: url('Images/IMG_9700B.jpg');
+    transform: translate(325px,-750px);
+    }
+
+img {
+    float: right;
+}

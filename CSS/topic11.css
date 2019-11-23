@@ -1,0 +1,45 @@
+h2 {
+        font-family: Showcard Gothic;    
+        text-align: left;
+        font-size: 30px;
+        color: navy;
+        margin:0px;
+            }
+
+body {
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: black;
+  background-color: red;
+}
+div.transition {
+  width: 200px;
+  height: 175px;
+  background-image: url(Images/IMG_9700B.jpg);
+  transition: width 10s, height 10s, transform 10s;
+}
+
+div.transition:hover {
+  width: 250px;
+  height: 225px;
+  transform: rotate(180deg);
+}
+
+div {
+  width: 75px;
+  height: 75px;
+  background-image: url(Images/lines.png);
+ 
+  transition: width 10s;
+}
+
+#linear {transition-timing-function: linear;}
+#ease {transition-timing-function: ease;}
+#ease-in {transition-timing-function: ease-in;}
+#ease-out {transition-timing-function: ease-out;}
+#ease-in-out {transition-timing-function: ease-in-out;}
+
+div:hover {
+  width: 1000px;
+}

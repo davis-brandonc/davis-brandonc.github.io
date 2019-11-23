@@ -14,7 +14,7 @@ body {
   color: black;
   background-color: red;
 }
-    div.rotate {
+div.rotate {
     width: 300px;
     height: 225px;
     background-image: url('Images/IMG_9700B.jpg');
@@ -37,4 +37,8 @@ body {
 
 img {
     float: right;
+}
+
+img.test {
+    float: left;
 }

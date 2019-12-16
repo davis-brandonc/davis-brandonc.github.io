@@ -1,7 +1,7 @@
 var mem = {
   /* [INITIALIZE] */
   grid: [], // current play grid
-  total : 6, // total number of smiley pairs to match
+  total : 12, // total number of smiley pairs to match
   init: function () {
     // init() : initialize the game
 
@@ -41,7 +41,7 @@ var mem = {
     container.innerHTML = "";
     for (var i=0; i<mem.grid.length; i++) {
       card = document.createElement("div");
-      card.innerHTML = "<img src='Images\back.jpg'/>";
+      card.innerHTML = "<img src='back.jpg'/>";
       card.classList.add("mem-card");
       card.setAttribute("id", "mem-card-" + i);
       card.dataset.idx = i;
@@ -76,7 +76,7 @@ var mem = {
 
       // (3) FLIP OPEN & SHOW SMILEY
       this.classList.add("open");
-      this.innerHTML = "<img src='Images\davis-" + mem.grid[this.dataset.idx] + ".jpg'/>";
+      this.innerHTML = "<img src='davis-" + mem.grid[this.dataset.idx] + ".jpg'/>";
 
       // (4) MATCH CARDS WHEN 2 ARE SELECTED + UPDATE STATS
       mem.moves++;
@@ -109,7 +109,7 @@ var mem = {
     if (ok) {
       card.classList.add("ok");
     } else {
-      card.innerHTML = "<img src='Images\back.jpg'/>";
+      card.innerHTML = "<img src='back.jpg'/>";
       card.addEventListener("click", mem.play);
     }
 
@@ -119,7 +119,7 @@ var mem = {
     if (ok) {
       card.classList.add("ok");
     } else {
-      card.innerHTML = "<img src='Images\back.jpg'/>";
+      card.innerHTML = "<img src='back.jpg'/>";
       card.addEventListener("click", mem.play);
     }
 

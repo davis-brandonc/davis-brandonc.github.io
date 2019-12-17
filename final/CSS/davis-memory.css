@@ -1,25 +1,33 @@
 /* [PLAY GRID] */
+
 #mem-play {
   max-width: 600px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-}
+  grid-template-columns: auto auto auto auto auto auto;
+  padding-left: 28em;
+     }
 .mem-card {
-  background: #f7f7f7;
+  background: #ffd700;
   padding: 20px;
   text-align: center;
   cursor: pointer;
 }
 .mem-card.open {
-  background: #fea;
+  background: #008800;
 }
 .mem-card.ok {
-  background: #cfffc2;
+  background: #FF0000;
 }
 
-/* [DOES NOT MATTER] */
-html, body {
+body {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: darkgreen;
+}
+header h1 {
+    color: red;
+    font-size: 80px;
+    text-align:center;
+    font-style: italic;
 }

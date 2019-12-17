@@ -88,7 +88,7 @@ var davis = {
 
           // (4B) WIN - ALL MATCHED
           if (davis.remain==0) {
-            alert("CONGRATULATIONS YOU MATCHED THEM ALL!" + "\n" + "Total number of the Davis family pictures turned over to win: " + davis.moves + "\n" + "Total failed guesses: - " + davis.incorrect);
+            alert("CONGRATULATIONS YOU MATCHED THEM ALL!" + "\n" + "Total number of the Davis family pictures turned over to win: " + davis.moves + "\n" + "Total failed guesses: " + davis.incorrect);
           }
         } else {
           // (4C) MISMATCH

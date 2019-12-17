@@ -1,18 +1,18 @@
 var mem = {
   /* [INITIALIZE] */
   grid: [], // current play grid
-  total : 15, // total number of smiley pairs to match
+  total : 14, // total number of smiley pairs to match
   init: function () {
     // init() : initialize the game
 
-    // (1) ARRAY OF AVAILABLE SMILIES
+    // (1) ARRAY OF AVAILABLE Davis Family Pictures
     mem.grid = [];
     for (var i=1; i<=mem.total; i++) {
       mem.grid.push(i);
       mem.grid.push(i);
     }
 
-    // (2) RANDOMLY SHUFFLE THE SMILIES
+    // (2) RANDOMLY SHUFFLE THE Davis Family Pictures
     // Credits : https://gomakethings.com/how-to-shuffle-an-array-with-vanilla-js/
     var currentIndex = mem.grid.length,
         temporaryValue, randomIndex;
@@ -61,7 +61,7 @@ var mem = {
   second : null, // second opened card
 
   // After showing 2 wrong cards, there will be a short delay before flipping back
-  show : 1000, // time to show wrong cards, in micro seconds
+  show : 2000, // time to show wrong cards, in micro seconds
   timer : null, // timer to flip back
   play : function () {
   // play() : when a card is selected
@@ -88,7 +88,7 @@ var mem = {
 
           // (4B) WIN - ALL MATCHED
           if (mem.remain==0) {
-            alert("WIN! Moves - " + mem.moves + " Mistakes - " + mem.mistakes);
+            alert("CONGRATULATIONS! Total number of the Davis family pictures turned over to win: " + mem.moves + " Total failed guesses - " + mem.mistakes);
           }
         } else {
           // (4C) MISMATCH

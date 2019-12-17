@@ -34,8 +34,10 @@ header h1 {
     font-style: italic;
 }
 .button{
-    height:50px;
-    width:150px;
-    font-size: 20px;
-    
+    display: block;
+    height:75px;
+    width:300px;
+    font-size: 30px;
+    margin: 0 auto;
+    color: red;
 }

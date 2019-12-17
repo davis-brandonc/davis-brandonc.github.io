@@ -33,6 +33,14 @@ header h1 {
     font-family: serif;
     font-style: italic;
 }
+
+header h2 {
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    font-family:monospace;
+    font-style: italic;
+}
 .button{
     display: block;
     height:75px;

@@ -1,22 +1,22 @@
 /* [PLAY GRID] */
 
-#mem-play {
+#davis-play {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
   padding-left: 3em;
   padding-right: 3em;
   
      }
-.mem-card {
+.davis-card {
   background: #ffd700;
   padding: 20px;
   text-align: center;
   cursor: pointer;
 }
-.mem-card.open {
+.davis-card.open {
   background: #C0C0C0;
 }
-.mem-card.ok {
+.davis-card.ok {
   background: #FF0000;
 }
 

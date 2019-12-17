@@ -41,7 +41,7 @@ var mem = {
     container.innerHTML = "";
     for (var i=0; i<mem.grid.length; i++) {
       card = document.createElement("div");
-      card.innerHTML = "<img src='back 800.jpg'/>";
+      card.innerHTML = "<img src='back 300.jpg'/>";
       card.classList.add("mem-card");
       card.setAttribute("id", "mem-card-" + i);
       card.dataset.idx = i;
@@ -109,7 +109,7 @@ var mem = {
     if (ok) {
       card.classList.add("ok");
     } else {
-      card.innerHTML = "<img src='back 800.jpg'/>";
+      card.innerHTML = "<img src='back 300.jpg'/>";
       card.addEventListener("click", mem.play);
     }
 
@@ -119,7 +119,7 @@ var mem = {
     if (ok) {
       card.classList.add("ok");
     } else {
-      card.innerHTML = "<img src='back 800.jpg'/>";
+      card.innerHTML = "<img src='back 300.jpg'/>";
       card.addEventListener("click", mem.play);
     }
 

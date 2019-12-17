@@ -88,7 +88,7 @@ var davis = {
 
           // (4B) WIN - ALL MATCHED
           if (davis.remain==0) {
-            alert("CONGRATULATIONS YOU MATCHED THEM ALL!" + "\n" + "Total number of the Davis family pictures turned over to win: " + davis.moves + "\n" + "Total failed guesses: " + davis.incorrect + "\n" + "Memory Evaluation below, based upon how many pictures turne over:" + "\n" + "YOU HAVE A GENIUS' MEMORY - 59 OR LESS" + "\n" + "YOU HAVE A BETTER THAN AVERAGE MEMORY  - 60-79" + "\n" + "YOU HAVE AN AVERAGE MEMORY  - 80-99" + "\n" + "MEMORY EXCERSIZES SHOULD BE IN YOUR FUTURE  - 100-119" + "\n" + "IT IS A GOOD THING YOU REMEMBERED TO GET OUT OF BED THIS MORNING  - 120 or MORE");
+            alert("CONGRATULATIONS YOU MATCHED THEM ALL!" + "\n" + "Total number of the Davis family pictures turned over to win: " + davis.moves + "\n" + "Total failed guesses: " + davis.incorrect + "\n" + "Memory Evaluation below, based upon how many pictures turned over:" + "\n" + "YOU HAVE A GENIUS' MEMORY - 59 OR LESS" + "\n" + "YOU HAVE A BETTER THAN AVERAGE MEMORY  - 60-79" + "\n" + "YOU HAVE AN AVERAGE MEMORY  - 80-99" + "\n" + "MEMORY EXCERSIZES SHOULD BE IN YOUR FUTURE  - 100-119" + "\n" + "IT IS A GOOD THING YOU REMEMBERED TO GET OUT OF BED THIS MORNING  - 120 or MORE");
           }
         } else {
           // (4C) MISMATCH

@@ -1,10 +1,11 @@
 /* [PLAY GRID] */
 
 #mem-play {
-  max-width: 600px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  padding-left: 28em;
+  grid-template-columns: repeat( auto-fit, minmax(800px, 1fr) );
+  padding-left: 5em;
+  padding-right: 5em;
+  
      }
 .mem-card {
   background: #ffd700;
@@ -13,7 +14,7 @@
   cursor: pointer;
 }
 .mem-card.open {
-  background: #008800;
+  background: #C0C0C0;
 }
 .mem-card.ok {
   background: #FF0000;
@@ -27,7 +28,14 @@ body {
 }
 header h1 {
     color: red;
-    font-size: 80px;
-    text-align:center;
+    font-size: 100px;
+    text-align: center;
+    font-family: serif;
     font-style: italic;
+}
+.button{
+    height:200px;
+    width:800px;
+    font-size: 100px;
+    
 }

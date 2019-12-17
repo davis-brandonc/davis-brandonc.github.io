@@ -1,67 +1,67 @@
-var mem = {
+var davis = {
   /* [INITIALIZE] */
-  grid: [], // current play grid
-  total : 14, // total number of smiley pairs to match
+  grid: [], // play grid
+  total : 14, // total number of Davis Family Picture pairs to match
   init: function () {
-    // init() : initialize the game
+    // init() : start the game
 
     // (1) ARRAY OF AVAILABLE Davis Family Pictures
-    mem.grid = [];
-    for (var i=1; i<=mem.total; i++) {
-      mem.grid.push(i);
-      mem.grid.push(i);
+    davis.grid = [];
+    for (var i=1; i<=davis.total; i++) {
+      davis.grid.push(i);
+      davis.grid.push(i);
     }
 
     // (2) RANDOMLY SHUFFLE THE Davis Family Pictures
     // Credits : https://gomakethings.com/how-to-shuffle-an-array-with-vanilla-js/
-    var currentIndex = mem.grid.length,
+    var currentIndex = davis.grid.length,
         temporaryValue, randomIndex;
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-      temporaryValue = mem.grid[currentIndex];
-      mem.grid[currentIndex] = mem.grid[randomIndex];
-      mem.grid[randomIndex] = temporaryValue;
+      temporaryValue = davis.grid[currentIndex];
+      davis.grid[currentIndex] = davis.grid[randomIndex];
+      davis.grid[randomIndex] = temporaryValue;
     }
 
     // (3) RESET THE SCORES
-    mem.remain = mem.total;
-    mem.moves = 0;
-    mem.mistakes = 0;
-    mem.first = null;
-    mem.second = null;
-    if (mem.timer != null) {
-      clearTimeout(mem.timer);
-      mem.timer = null;
+    davis.remain = davis.total;
+    davis.moves = 0;
+    davis.incorrect = 0;
+    davis.first = null;
+    davis.second = null;
+    if (davis.timer != null) {
+      clearTimeout(davis.timer);
+      davis.timer = null;
     }
 
     // (4) DRAW HTML GRID
-    var container = document.getElementById("mem-play"),
+    var container = document.getElementById("davis-play"),
         card = null;
     container.innerHTML = "";
-    for (var i=0; i<mem.grid.length; i++) {
+    for (var i=0; i<davis.grid.length; i++) {
       card = document.createElement("div");
       card.innerHTML = "<img src='back 300.jpg'/>";
-      card.classList.add("mem-card");
-      card.setAttribute("id", "mem-card-" + i);
+      card.classList.add("davis-card");
+      card.setAttribute("id", "davis-card-" + i);
       card.dataset.idx = i;
-      card.addEventListener("click", mem.play);
+      card.addEventListener("click", davis.play);
       container.appendChild(card);
     }
 
     // (X) CHEAT - SEE THE SHUFFLED CARDS
-    // console.log(mem.grid);
+    // console.log(davis.grid);
   },
 
   /* [PLAY] */
   remain : 0, // number of pairs remaining
   moves : 0, // total number of moves
-  mistakes : 0, // total number of mismatches
+  incorrect : 0, // total number of mismatches
   first : null, // first opened card
   second : null, // second opened card
 
   // After showing 2 wrong cards, there will be a short delay before flipping back
-  show : 2000, // time to show wrong cards, in micro seconds
+  show : 1000, // time to show wrong cards, in micro seconds
   timer : null, // timer to flip back
   play : function () {
   // play() : when a card is selected
@@ -69,31 +69,31 @@ var mem = {
     // (1) CHECKS - "SAFETY LOCK"
     // Will proceed only when not showing wrong cards
     // Will proceed only if selected card is different
-    if (mem.second === null) { if (this.dataset.idx != mem.first) {
+    if (davis.second === null) { if (this.dataset.idx != davis.first) {
       // (2) "SAVE" THE SELECTED CARD
-      if (mem.first === null) { mem.first = this.dataset.idx; }
-      else { mem.second = this.dataset.idx; }
+      if (davis.first === null) { davis.first = this.dataset.idx; }
+      else { davis.second = this.dataset.idx; }
 
-      // (3) FLIP OPEN & SHOW SMILEY
+      // (3) FLIP OPEN & SHOW Davis Family Pictures
       this.classList.add("open");
-      this.innerHTML = "<img src='davis-" + mem.grid[this.dataset.idx] + ".jpg'/>";
+      this.innerHTML = "<img src='davis-" + davis.grid[this.dataset.idx] + ".jpg'/>";
 
       // (4) MATCH CARDS WHEN 2 ARE SELECTED + UPDATE STATS
-      mem.moves++;
-      if (mem.first!==null && mem.second!==null) {
-        if (mem.grid[mem.first] == mem.grid[mem.second]) {
+      davis.moves++;
+      if (davis.first!==null && davis.second!==null) {
+        if (davis.grid[davis.first] == davis.grid[davis.second]) {
           // (4A) MATCHED
-          mem.update(true);
-          mem.remain--;
+          davis.update(true);
+          davis.remain--;
 
           // (4B) WIN - ALL MATCHED
-          if (mem.remain==0) {
-            alert("CONGRATULATIONS! Total number of the Davis family pictures turned over to win: " + mem.moves + " Total failed guesses - " + mem.mistakes);
+          if (davis.remain==0) {
+            alert("CONGRATULATIONS! Total number of the Davis family pictures turned over to win: " + davis.moves + " Total failed guesses - " + davis.incorrect);
           }
         } else {
           // (4C) MISMATCH
-          mem.timer = setTimeout(mem.update, mem.show);
-          mem.mistakes++;
+          davis.timer = setTimeout(davis.update, davis.show);
+          davis.incorrect++;
         }
       }
     }}
@@ -104,31 +104,31 @@ var mem = {
   // PARAM ok : true for cards matched, false (or undefined) for mismatch
 
     // (5) FIRST CARD
-    var card = document.getElementById("mem-card-" + mem.first);
+    var card = document.getElementById("davis-card-" + davis.first);
     card.classList.remove("open");
     if (ok) {
       card.classList.add("ok");
     } else {
       card.innerHTML = "<img src='back 300.jpg'/>";
-      card.addEventListener("click", mem.play);
+      card.addEventListener("click", davis.play);
     }
 
     // (6) SECOND CARD
-    card = document.getElementById("mem-card-" + mem.second);
+    card = document.getElementById("davis-card-" + davis.second);
     card.classList.remove("open");
     if (ok) {
       card.classList.add("ok");
     } else {
       card.innerHTML = "<img src='back 300.jpg'/>";
-      card.addEventListener("click", mem.play);
+      card.addEventListener("click", davis.play);
     }
 
     // (7) RESET SELECTIONS
-    mem.first = null;
-    mem.second = null;
-    mem.timer = null;
+    davis.first = null;
+    davis.second = null;
+    davis.timer = null;
   }
 };
 
 /* [START ON WINDOW LOAD] */
-window.addEventListener("load", mem.init);
+window.addEventListener("load", davis.init);
